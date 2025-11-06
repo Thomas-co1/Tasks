@@ -1,7 +1,9 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('taches', 'admin', 'toto', {
-    host: '127.0.0.1',
+
+const sequelize = new Sequelize(
+    process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+    host: 'localhost',
     dialect: 'mysql', // utilise mysql2 automatiquement
 });
 
