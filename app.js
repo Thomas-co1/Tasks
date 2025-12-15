@@ -1,3 +1,7 @@
+const dotenv = require('dotenv');
+dotenv.config(
+  { path: process.env.NODE_ENV === 'test' ? '.env.test' : './.env' }
+);
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -5,10 +9,7 @@ const loggers = require('./middleware/logger');
 const logger = require('morgan');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
-const dotenv = require('dotenv');
-dotenv.config(
-  { path: process.env.NODE_ENV === 'test' ? '.env.test' : './.env' }
-);
+
 
 
 

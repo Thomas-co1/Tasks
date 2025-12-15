@@ -14,6 +14,6 @@ Task.belongsToMany(Tag, { through: 'TaskTags' });
 module.exports = {
     'Task': Task,
     'User': User,
-    'Tag': Tag,
+    'Tag': Tag, 
     sequelize:sequelize
 };
